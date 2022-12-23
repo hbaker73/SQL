@@ -1,0 +1,31 @@
+CREATE TABLE clothes (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, sales INTEGER, stock INTEGER);
+
+INSERT INTO clothes VALUES (1, 'shirt', 15, 100, 200),
+INSERT INTO clothes VALUES (2, 'pants', 20, 85, 150),
+INSERT INTO clothes VALUES (3, 'shorts', 18, 38, 143),
+INSERT INTO clothes VALUES (4, 'socks', 5, 60, 99),
+INSERT INTO clothes VALUES (5, 'shoes', 60, 42, 72),
+INSERT INTO clothes VALUES (6, 'bathing_suit', 32, 81, 25),
+INSERT INTO clothes VALUES (7, 'dress', 40, 93, 180),
+INSERT INTO clothes VALUES (8, 'tie', 12, 42, 40),
+INSERT INTO clothes VALUES (9, 'bowtie', 10, 21, 30),
+INSERT INTO clothes VALUES (10, 'blouse', 43, 76, 80),
+INSERT INTO clothes VALUES (11, 'under_garment', 14, 40, 80),
+INSERT INTO clothes VALUES (12, 'purse', 35, 15, 20),
+INSERT INTO clothes VALUES (13, 'wallet', 35, 16, 20),
+INSERT INTO clothes VALUES (14, 'jeans', 50, 80, 120),
+INSERT INTO clothes VALUES (15, 'sweaters', 45, 70, 100);
+
+SELECT * FROM clothes;
+
+--display the database ordered by price more than $30
+SELECT * FROM clothes WHERE price > 30;
+
+--display the database ordered by price.
+SELECT * FROM clothes ORDER BY price;
+
+--display the databased ordered by popularity.
+SELECT * FROM clothes ORDER BY sales;
+
+--how much stock do we have currently of all items?
+SELECT SUM(stock) FROM clothes; 
